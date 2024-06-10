@@ -29,7 +29,65 @@
             <a href="./contact.html">Contact us</a>
          </nav>
     </header>
-    <main></main>
+    <main class="container-fluid" id="admin">
+        <div class="row">
+            <h2 class="display-2">
+                Admin
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col">
+              <button class="btn btn-secondary m-3" id="adminSortProduct">Sort</button>
+            </div>
+            <div class="col">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-secondary m-3" data-bs-toggle="modal" data-bs-target="#adminAddProduct">
+                Add New 
+              </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="adminAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">New Product</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form">
+                      <div class="container">
+                        <input class="form-control m-2" type="text" placeholder="Enter the Product Name" name="addName" id="addName" required>
+                        <textarea class="form-control m-2" placeholder="Enter the Product Details" name="addDetail" id="addDetail" required></textarea>
+                        <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" name="addAmount" id="addAmount" required >
+                        <input class="form-control m-2" type="url" placeholder="Enter the image's url" name="addImage" id="addImage" required >
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" id="saveProduct">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <table class="table-responsive table-bordered">
+              <thead class="table-group-divider">
+                <tr>
+                  <th>Product</th>
+                  <th>Details</th>
+                  <th>Image</th>
+                  <th>Amount</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider" table-products>
+                
+              </tbody>
+            </table>
+          </div>
+    </main> 
     <footer class="container-fluid">
         <div class="row">
             <p class="lead">Fresh Blend Caffe` &copy;
