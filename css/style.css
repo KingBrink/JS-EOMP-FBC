@@ -53,3 +53,36 @@ img {
     object-position: center;
 }
 
+.aboutinfo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.aboutimg {
+    width: 400px; 
+    height: auto;
+    margin-right: 20px; 
+    transition: transform 0.3s ease; 
+}
+
+.aboutpar {
+    flex:1 ; 
+}
+
+.aboutpar p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    transition: color 0.3s ease; 
+}
+
+/* Hover effect for image */
+.aboutimg:hover {
+    transform: scale(1.05); 
+}
+
+/* Hover effect for paragraphs */
+.aboutpar p:hover {
+    color: darkblue; 
+}
