@@ -29,7 +29,69 @@
             <a href="./contact.html">Contact us</a>
          </nav>
     </header>
-    <main></main>
+    <main class="container-fluid">
+        <div class="row">
+            <h2 class="display-2">
+                Contact Us
+            </h2>
+        </div>
+        <section class="contact" id="contact">
+            <div class="row">
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52876.67813384316!2d18.542497739303542!3d-34.07483607570331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc46f9c7f0fda3%3A0xda0a666a67261658!2sStrandfontein%2C%20Cape%20Town%2C%207788!5e0!3m2!1sen!2sza!4v1716632652138!5m2!1sen!2sza"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="contactsec container-lg" id="Contact">
+                        <h2 class="display-2 mb-5">Get in touch</h2>
+                        <form action="https://formspree.io/f/xleqzzyb" method="POST" class="form" id="myForm"
+                            style="padding-bottom: 7%;">
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <input type="text" class="form-control" name="name" placeholder="First name"
+                                        aria-label="First name" required>
+                                </div>
+                                <div class="col-5">
+                                    <input type="text" class="form-control" name="lastname" placeholder="Last name"
+                                        aria-label="Last name" required>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-10 mb-3">
+                                    <label for="exampleInputEmail1" class="form-label"></label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" name="email" placeholder="Your Email" required>
+                                    <div id="emailHelp" class="form-text"></div>
+                                </div>
+        
+                                <div class="col-10 mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="message"
+                                        placeholder="Enter Message Here" required></textarea>
+                                </div>
+                            </div>
+        
+                            <button type="submit" class="btn subButton" name="submit">Submit</button>
+                            <button type="button" id="clearButton" class="btn">Clear</button>
+                        </form>
+        
+                        <div class="deats justify-content-around">
+                            <a href="mailto:kyle.brink1602@gmail.com" class="my-3 mail" mail><i
+                                    class="fa fa-envelope"></i>kyle.brink1602@gmail.com</a>
+                            <text class="my-3"><i class="fa fa-phone"></i> +27 67 404 6393</text>
+                        </div>
+                        <div class="footer-bar mx-4">
+                            <div class="icons">
+                                <a href="https://www.instagram.com/king_brink?igsh=ODk2M20waDc2cm9r&utm_source=qr"
+                                    target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="https://github.com/KingBrink" target="_blank"><i class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/kyle-brink-3372232a0/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+        
+                    </div>
+            </div>
+        </section>
+    </main>
     <footer class="container-fluid">
         <div class="row">
             <p class="lead">Fresh Blend Caffe` &copy;
@@ -42,11 +104,10 @@
      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
  </script>
  <!-- javascript -->
- <script>
+ <script src="../script/code.js">
   //Current year
   document.querySelector('[currentYear]').textContent=
       new Date().getUTCFullYear()
-  
- </script>
+  </script>
 </body>
 </html>
