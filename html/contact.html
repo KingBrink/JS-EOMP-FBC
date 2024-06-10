@@ -69,9 +69,11 @@
                                         placeholder="Enter Message Here" required></textarea>
                                 </div>
                             </div>
+                            <div class="mx-5">
+                                <button type="submit" class="btn subButton" name="submit">Submit</button>
+                                <button type="button" id="clearButton" class="btn" onclick="clearForm()">Clear</button>
+                            </div>
         
-                            <button type="submit" class="btn subButton" name="submit">Submit</button>
-                            <button type="button" id="clearButton" class="btn">Clear</button>
                         </form>
         
                         <div class="deats justify-content-around">
@@ -104,7 +106,7 @@
      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
  </script>
  <!-- javascript -->
- <script src="../script/code.js">
+ <script>
   //Current year
   document.querySelector('[currentYear]').textContent=
       new Date().getUTCFullYear()

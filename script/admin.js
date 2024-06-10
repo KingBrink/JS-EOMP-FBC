@@ -17,7 +17,7 @@ function adminContent(args){
             <tr>
                 <td>${product.productName}</td>
                 <td>${product.description}</td>
-                <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail h-25 w-25"></td>
+                <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail"></td>
                 <td>R${product.amount}</td>
                 <td> 
                 <div>

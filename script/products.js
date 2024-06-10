@@ -98,11 +98,11 @@ function displayProducts(args) {
     if (args) {
       args?.forEach((product) => {
         productWrapper.innerHTML += `
-                <div class="col">
-                <div class="card">
+                <div class="col-md-4 my-3">
+                <div class="card prodCard">
                 <img src="${
                   product.img_url
-                }" class="card-img-top h-50 w-50 img-fluid align-self-center" alt="${
+                }" class="card-img-top h-50 w-50 img-fluid align-self-center mt-4" alt="${
           product.id
         }">
                 <div class="card-body">

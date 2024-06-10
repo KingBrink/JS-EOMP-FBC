@@ -14,8 +14,6 @@
     display: grid;
 }
 body {
-    grid-template-rows: auto minmax(100%, 100dvh) 
-    auto;
     font-family: "Playfair Display", serif;
 }
 
@@ -154,4 +152,27 @@ textarea.form-control {
     padding: 0;
     font-size: 20px;
     color: rgb(53, 93, 216);
+}
+
+.img-thumbnail{
+    max-width: 25vw;
+    max-height: 25vh;
+}
+
+.products{
+    justify-content: center;
+    align-items: center;
+}
+
+.prodCard{
+    height: 550px;
+}
+
+.homeCard{
+    text-align: center;
+}
+
+.btn-grp{
+    justify-content: center;
+    align-items: center;
 }
