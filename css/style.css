@@ -3,8 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Change this to your desired background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 :is(body) {
@@ -12,7 +12,7 @@
     display: grid;
 }
 body {
-    grid-template-rows: auto minmax(100dvh, 100%)
+    grid-template-rows: auto minmax(100%, 100dvh) 
     auto;
 }
 
@@ -39,4 +39,8 @@ body {
     text-decoration: underline;
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+:is(h2, footer p){
+    text-align: center;
 }
