@@ -29,7 +29,32 @@
             <a href="./contact.html">Contact us</a>
          </nav>
     </header>
-    <main></main>
+    <main class="container-fluid" id="checkout" data-checkout>
+        <div class="row">
+            <h2 class="display-2">
+                Checkout
+            </h2>
+        </div>
+        <div class="row container-fluid">
+            <div class="col">
+              <table class="table table-bordered table-responsive">
+                <thead class="table-group-divider">
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider" table-checkout></tbody>
+                <tfoot class="table-group-divider">
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <a class="btn btn-secondary" id="clear" onclick='clearProducts()'>Clear Items</a>
+          <a class="btn btn-secondary" id="pay" onclick='productPayment()'>Pay Now</a>
+        </main>
     <footer class="container-fluid">
         <div class="row">
             <p class="lead">Fresh Blend Caffe` &copy;
