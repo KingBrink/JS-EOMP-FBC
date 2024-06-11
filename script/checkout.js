@@ -9,7 +9,7 @@ function cartItems(){
         for(let i in cartProducts) {
             checkoutTable.innerHTML += `
             <tr>
-                <td>${cartProducts[i][0].productName}</td>
+                <td>${cartProducts[i][0].name}</td>
                 <td>${cartProducts[i].length}</td>
                 <td>${cartProducts[i][0].amount}</td>
                 <td>${eval(`${cartProducts[i][0].amount} * ${cartProducts[i].length}`)}</td>
