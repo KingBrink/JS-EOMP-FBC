@@ -150,15 +150,15 @@ productSearch.addEventListener("input", () => {
 });
 
 //filter by catergory
-let productCatergory = document.querySelector("[catergory]");
-productCatergory.addEventListener("change", () => {
-    console.log(productCatergory);
+let productCategory = document.querySelector("[category]");
+
+productCategory.addEventListener("change", () => {
+    
     try {
       let searchItem = products.filter((item) => {
-  
         return item.category
           .toLowerCase()
-          .includes(productCatergory.value.toLowerCase());
+          .includes(productCategory.value.toLowerCase());
       });
       displayProducts(searchItem);
     } catch (e) {
@@ -172,6 +172,7 @@ productCatergory.addEventListener("change", () => {
 let productSort = document.querySelector(".btn");
 let highest = false;
 productSort.addEventListener("click", () => {
+  console.log("here");
   try {
     if (!highest) {
       products.sort((a, b) => b.amount - a.amount);
@@ -189,7 +190,6 @@ productSort.addEventListener("click", () => {
 //puts objects in new localStorage for other page
 let cart = JSON.parse(localStorage.getItem("checkout")) || [];
 function addToCart(product) {
-  debugger;
   try {
     cart.push(product);
     localStorage.setItem("checkout", JSON.stringify(cart));

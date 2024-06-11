@@ -10,7 +10,7 @@
 }
 
 :is(body) {
-    background-color: #ff0157;
+    background-color: #f8f8f8;
     display: grid;
 }
 body {
@@ -30,7 +30,7 @@ p{
 }
 #banner {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -64,11 +64,12 @@ p{
     text-transform: uppercase;
     text-transform: none;
     text-decoration: 2px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .btn1:hover {
     letter-spacing: 6px;
+
 }
 
 header {
@@ -83,11 +84,7 @@ header {
     align-items: center;
     transition: 0.5s;
 }
-header.sticky{
-    background: #fff;
-    padding: 10px 100px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
+
 
 header .logo {
     color: #fff;
@@ -96,9 +93,7 @@ header .logo {
     text-decoration: none;
 }
 
-header .sticky .logo {
-    color: #111;
-}
+
 
 header .logo span {
     color: #ff0157;
@@ -108,7 +103,6 @@ header .navigation {
     position: relative;
     display: flex;
 }
-
 
 header .navigation li {
     list-style: none;
@@ -120,9 +114,6 @@ header .navigation li a {
     font-weight: 300;
 }
 
-header .sticky .navigation li a {
-    color: #111;
-}
 
 header .navigation li a:hover{
     color: #ff0157;
@@ -173,7 +164,7 @@ img {
 
 /* Hover effect for paragraphs */
 .aboutpar p:hover {
-    color: darkblue; 
+    color: #ff0157; 
 }
 
 /* Map styles */
@@ -220,7 +211,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-    background-color: #555;
+    background-color: #ff0157;
 }
 
 /* Contact details styles */
@@ -268,3 +259,37 @@ textarea.form-control {
     align-items: center;
 }
 
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-link,
+.phone-number {
+    margin: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 120px; 
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-icons i {
+    font-size: 24px; /* Adjust icon size as needed */
+}
