@@ -131,3 +131,5 @@ function clearForm() {
 // Attach event listener to the clear button
 document.getElementById("clearButton").addEventListener("click", clearForm);
 
+
+
