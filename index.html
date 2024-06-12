@@ -18,16 +18,43 @@
 
 <body>
     <header>
-        <a href="#" class="logo">Fresh Blend Cafe`<span>.</span></a>
-        <ul class="navigation">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./html/about.html">About</a></li>
-            <li><a href="./html/products.html">Products</a></li>
-            <li><a href="./html/checkout.html">Checkout</a></li>
-            <li><a href="./html/admin.html">Admin</a></li>
-            <li><a href="./html/contact.html">Contact Us</a></li>
-        </ul>
-    </header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: 1.2rem;">Fresh Blend Cafe`<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-size: 1.2rem;"><i class="bi bi-emoji-wink"></i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html" style="font-size: 1rem;">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/about.html" style="font-size: 1rem;">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/products.html" style="font-size: 1rem;">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/checkout.html" style="font-size: 1rem;">Checkout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/admin.html" style="font-size: 1rem;">Admin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/contact.html" style="font-size: 1rem;">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
     <section class="banner" id="banner">
         <div class="content">
             <h2>Always Choose Good</h2>

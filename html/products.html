@@ -16,17 +16,46 @@
 </head>
 
 <body>
-    <header class="navnav">
-        <a href="../index.html" class="logo">Fresh Blend Cafe`<span>.</span></a>
-        <ul class="navigation">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./products.html">Products</a></li>
-            <li><a href="./checkout.html">Checkout</a></li>
-            <li><a href="./admin.html">Admin</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-    </header>
+   <header>
+    <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" style="font-size: 1.2rem;" href="../index.html">Fresh Blend Cafe`<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-size: 1.2rem;"><i class="bi bi-emoji-wink"></i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./products.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./checkout.html">Checkout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./admin.html">Admin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+   </header>
     <main>
         <section id="product" class="container mt-4">
             <h2>Our Products</h2>

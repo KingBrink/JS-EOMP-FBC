@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
+
 
 :is(body) {
     background-color: #f8f8f8;
@@ -17,17 +10,13 @@ body {
     font-family: "Playfair Display", serif;
     min-height: 1000px;
 }
-.navnav{
-    background-color: #111;
-}
+
 p{
     font-weight: 300;
     color: #111;
 }
 
-.navnav{
-    background-color: #111;
-}
+
 #banner {
     position: relative;
     /* width: 100%; */
@@ -69,54 +58,6 @@ p{
 
 .btn1:hover {
     letter-spacing: 6px;
-
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 100px;
-    z-index: 10000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.5s;
-}
-
-
-header .logo {
-    color: #fff;
-    font-weight: 700;
-    font-size: 2em;
-    text-decoration: none;
-}
-
-
-
-header .logo span {
-    color: #ff0157;
-}
-
-header .navigation {
-    position: relative;
-    display: flex;
-}
-
-header .navigation li {
-    list-style: none;
-    margin-left: 30px;
-}
-header .navigation li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 300;
-}
-
-
-header .navigation li a:hover{
-    color: #ff0157;
 }
 
 section {
@@ -293,3 +234,129 @@ textarea.form-control {
 .social-icons i {
     font-size: 24px; /* Adjust icon size as needed */
 }
+
+/* Make the navbar responsive */
+
+.navbar {
+    background-color: #ff0157; 
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+ 
+  .navbar-brand {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 1.5rem;
+  }
+  
+  .offcanvas {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+  }
+  
+  .offcanvas-header {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .offcanvas-title {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .offcanvas-body {
+    padding: 1rem;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .nav-item {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    color: #020202;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  } 
+  
+  .nav-link:hover {
+    color: #ff0157;
+  }
+  
+  
+  /* Media queries for responsive design */
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+   .navbar {
+      padding: 1.5rem;
+    }
+   .navbar-brand {
+      font-size: 2rem;
+    }
+   .navbar-toggler {
+      padding: 0.75rem 1.5rem;
+    }
+   .offcanvas {
+      max-width: 400px;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  
+/* Tablet styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Mobile styles (max-width: 480px) */
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 0.2rem 0.5rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+   .navbar {
+      padding: 3rem;
+    }
+   .navbar-brand {
+      font-size: 3.5rem;
+    }
+   .navbar-toggler {
+      padding: 1.5rem 3rem;
+    }
+   .offcanvas {
+      max-width: 700px;
+    }
+  }
