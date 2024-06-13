@@ -98,7 +98,7 @@ data = JSON.stringify([
     productName: "Southwest Fiesta Wrap",
     category: "wrap",
     description:
-      "Grilled/shredded chicken, seasoned black beans, corn kernels, diced tomatoes, avocado/guacamole, shredded lettuce.",
+      "Grilled/shredded chicken, seasoned black beans, corn kernels, diced tomatoes, avocado/guacamole, shredded lettuce",
     amount: 99.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health18.jpg",
