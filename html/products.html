@@ -18,11 +18,11 @@
 
 <body>
   <nav class="navbar fixed-top p-0">
-    <div class="container-fluid">
+    <div class="container-fluid mx-3">
       <a class="navbar-brand" style="font-size: 1.2rem;" href="../index.html">Fresh Blend Cafe`<span>.</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon bg-danger"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
@@ -59,31 +59,31 @@
     <section id="product" class="container mt-4">
       <h2>Our Products</h2>
       <div class="row">
-        <div class="col">
+        <div class="col-md-9">
           <input type="text" placeholder="Search" required class="form-control" data-search-product>
-          <div class="col">
-            <div class="btn-group">
-              <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Sort
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" highSort>Highest</a></li>
-                <li><a class="dropdown-item" lowSort>Lowest</a></li>
-              </ul>
-            </div>
-                    
-          </div>
-          <a class="btn btn-secondary m-1" href="../html/checkout.html">Cart</a>
         </div>
-        <div class="col">
+        <div class="col-md-3">
           <select category>
             <option value=""></option>
             <option value="wrap">wrap</option>
             <option value="smoothie">smoothie</option>
             <option value="salad">salad</option>
           </select>
+          <a class="btn btn-secondary m-1" href="../html/checkout.html">Cart</a>
         </div>
+      </div>
+      <div class="col-3">
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Sort
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" highSort>Highest</a></li>
+            <li><a class="dropdown-item" lowSort>Lowest</a></li>
+          </ul>
+        </div>
+                
       </div>
       <div class="row products" data-products>
         <!-- <div class="col-md-4 my-3"> -->

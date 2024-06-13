@@ -163,9 +163,8 @@ textarea.form-control {
 }
 
 .deats a, .deats text {
-    display: block;
     margin-bottom: 10px;
-    color: #333;
+    color: #ff0157;
 }
 
 /* Font Awesome icon styles */
@@ -252,7 +251,6 @@ textarea.form-control {
  
   .navbar-brand {
     font-size: 1rem;
-    margin-left: 40px;
     color: #ff0157;
   }
   .navbar1-brand {
@@ -320,6 +318,14 @@ textarea.form-control {
   
   .nav-link:hover {
     color: #ff0157;
+  }
+
+  .productImg{
+    max-height: 280px;
+  }
+
+  .addButton{
+    background-color: #ff0157;
   }
   
   
