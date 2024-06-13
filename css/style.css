@@ -76,28 +76,41 @@ img {
     object-position: center;
 }
 
+.offcanvas-title{
+  color: #ff0157;
+  font-style: oblique;
+}
+
 .aboutinfo {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .aboutimg {
-    width: 400px; 
-    height: auto;
-    margin-right: 20px; 
-    transition: transform 0.3s ease; 
+  max-width: auto;
+  height: 300px;
+  margin-bottom: 20px;
 }
 
 .aboutpar {
-    flex:1 ; 
+  flex: 1;
+  padding: 0 20px;
+  text-align: left;
 }
 
-.aboutpar p {
-    font-size: 18px; 
-    line-height: 1.6; 
-    transition: color 0.3s ease; 
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .aboutinfo {
+      flex-direction: column;
+  }
+
+  .aboutpar {
+      padding: 0;
+  }
 }
 
 /* Hover effect for image */
@@ -175,7 +188,7 @@ textarea.form-control {
 .icons a {
     padding: 0;
     font-size: 20px;
-    color: rgb(53, 93, 216);
+    color: #ff0157;
 }
 
 .img-thumbnail{
@@ -258,6 +271,10 @@ textarea.form-control {
     margin-left: 40px;
     color: #fff;
   }
+
+  .navbar1-brand:hover{
+    color: #ff0157;
+  }
   
   .navbar-toggler {
     border: none;
@@ -279,7 +296,7 @@ textarea.form-control {
     width: 100%;
     max-width: 300px;
     padding: 1rem;
-    background-color: #f9f9f9;
+    background-color:#f8f8f8;
     border: 1px solid #ddd;
   }
   
@@ -310,7 +327,7 @@ textarea.form-control {
   }
   
   .nav-link {
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #020202;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -328,6 +345,9 @@ textarea.form-control {
     background-color: #ff0157;
   }
   
+  #cart.btn.btn-secondary{
+    background-color: #ff0157;
+  }
   
   /* Media queries for responsive design */
   
@@ -380,5 +400,39 @@ textarea.form-control {
       max-width: 700px;
     }
   }
+
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Define different background colors for different columns */
+  .responsive-table th:nth-child(1) {
+    background-color: #34032d; /* Light gray for Product Name column */
+  }
+  
+  .responsive-table th:nth-child(2) {
+    background-color: #b43fa0; /* Lighter gray for Category column */
+  }
+  
+  .responsive-table th:nth-child(3) {
+    background-color: #d21a94; /* Even lighter gray for Image column */
+  }
+  
+  /* Apply responsive styles */
+  @media (max-width: 768px) {
+    .responsive-table th,
+    .responsive-table td {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+  
 
   

@@ -16,7 +16,8 @@ function adminContent(args){
         tableContent.innerHTML = ""
         args?.forEach((product, i)=>{
             tableContent.innerHTML +=`
-            <tr>
+            <tr class"responsive-table">
+            
                 <th>${product.productName}</th>
                 <td>${product.category}</td>
                 <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail"></td>
