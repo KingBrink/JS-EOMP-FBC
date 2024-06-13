@@ -169,22 +169,31 @@ productCategory.addEventListener("change", () => {
 
 
 //sorts by the price
-let productSort = document.querySelector(".btn");
-let highest = false;
-productSort.addEventListener("click", () => {
-  console.log("here");
-  try {
-    if (!highest) {
-      products.sort((a, b) => b.amount - a.amount);
-      highest = true;
-    } else {
-      products.sort((a, b) => a.amount - b.amount);
-      highest = false;
+let highSort = document.querySelector('[highSort]')
+    let lowSort = document.querySelector('[lowSort]')
+
+    let isToggle = false;
+
+highSort.addEventListener('click', () => {
+    try {
+        if (!products) throw new Error('Please try again later');
+        products.sort((a, b) => b.amount - a.amount);
+        displayProducts(products);
+        isToggle = true;
+    } catch (e) {
+        container.textContent = e.message || 'We are working on this issue';
     }
-    displayProducts(products);
-  } catch (e) {
-    alert("This Function is under maintainance");
-  }
+});
+
+lowSort.addEventListener('click', () => {
+    try {
+        if (!products) throw new Error('Please try again later');
+        products.sort((a, b) => a.amount - b.amount);
+        displayProducts(products);
+        isToggle = false;
+    } catch (e) {
+        container.textContent = e.message || 'We are working on this issue';
+    }
 });
 
 //puts objects in new localStorage for other page

@@ -238,7 +238,7 @@ textarea.form-control {
 /* Make the navbar responsive */
 
 .navbar {
-    background-color: #ff0157; 
+    background-color: transparent; 
     padding: 0.5rem 1rem;
     display: flex;
     flex-wrap: wrap;
