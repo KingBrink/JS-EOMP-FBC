@@ -88,7 +88,7 @@ data = JSON.stringify([
     productName: "Greek Goddess Wrap",
     category: "wrap",
     description:
-      "Grilled chicken or gyro meat (thinly sliced), Tzatziki sauce, Lettuce, Tomato slices, Red onion slices, Cucumber slices, Feta cheese crumbles, Kalamata olives, Warm pita or flatbread",
+      "Grilled chicken or gyro meat (thinly sliced)",
     amount: 119.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health17.jpg",
@@ -98,7 +98,7 @@ data = JSON.stringify([
     productName: "Southwest Fiesta Wrap",
     category: "wrap",
     description:
-      "Grilled or shredded chicken, Black beans (cooked and seasoned), Corn kernels (fresh or cooked), Diced tomatoes, Avocado slices or guacamole, Shredded lettuce, Shredded cheese (such as cheddar or Monterey Jack), Salsa or pico de gallo, Sour cream or Greek yogurt (optional), Flour tortillas or spinach wraps",
+      "Grilled or shredded chicken, Black beans (cooked and seasoned)",
     amount: 99.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health18.jpg",
@@ -114,7 +114,17 @@ let products = localStorage.getItem("products") ? JSON.parse(localStorage.getIte
 let productWrapper = document.querySelector("[data-products]"); // this is the product/s holder.
 
 function createProduct(product){
-	return `<div class="col-md-4 my-3"><div class="card prodCard"><img src="${product.img_url}" class="card-img-top h-50 w-50 img-fluid align-self-center mt-4" alt="${product.id}"><div class="card-body"><h5 class="card-title">${product.productName}</h5><p class="card-text">${product.description}</p><p class="card-text">${product.amount}</p><a class="btn btn-secondary" id="cart" onclick='addToCart(${JSON.stringify(product)})'>Add To Cart</a></div></div></div>`;
+	return `
+  <div class="col-md-4 my-4">
+  <div class="card prodCard">
+  <img src="${product.img_url}" class="card-img-top img-fluid align-self-center productImg" alt="${product.id}">
+  <div class="card-body">
+  <h5 class="card-title">${product.productName}</h5>
+  <p class="card-text">${product.description}</p>
+  <p class="card-text">${product.amount}</p>
+  <a class="btn addButton" id="cart" onclick='addToCart(${JSON.stringify(product)})'>Add To Cart</a></div>
+  </div>
+  </div>`;
 }
 
 function displayProducts(args) {
