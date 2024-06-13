@@ -9,6 +9,7 @@ function createCartItem(cartProducts){
 	return `<tr>
 				<td>${cartProducts.productName}</td>
 				<td>${cartProducts.cart}</td>
+                <td>${cartProducts.category}</td>
 				<td>R ${cartProducts.amount}</td>
 				<td>R ${Intl.NumberFormat().format(cartProducts.cart * cartProducts.amount)}</td>
 			</tr>`;
