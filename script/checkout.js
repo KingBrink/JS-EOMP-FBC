@@ -1,21 +1,28 @@
 // Current year
 document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
 //gettting my products from the localStorage to display in my table
-let cart = JSON.parse(localStorage.getItem('checkout'));
+let cart = localStorage.getItem('checkout') ? JSON.parse(localStorage.getItem('checkout')) : [];
+
 let checkoutTable = document.querySelector('[table-checkout]')
+
+function createCartItem(cartProducts){
+	return `<tr>
+				<td>${cartProducts.productName}</td>
+				<td>${cartProducts.cart}</td>
+				<td>R ${cartProducts.amount}</td>
+				<td>R ${Intl.NumberFormat().format(cartProducts.cart * cartProducts.amount)}</td>
+			</tr>`;
+}
+
 function cartItems(){
     try{
-        let cartProducts = Object.groupBy(cart, item => { return item.id});
-        for(let i in cartProducts) {
-            checkoutTable.innerHTML += `
-            <tr>
-                <td>${cartProducts[i][0].productName}</td>
-                <td>${cartProducts[i].length}</td>
-                <td>${cartProducts[i][0].amount}</td>
-                <td>${eval(`${cartProducts[i][0].amount} * ${cartProducts[i].length}`)}</td>
-            </tr>
-         `
-        }
+        // let cartProducts = Object.groupBy(cart, item => { return item.id});
+		console.log(cart)
+		cart.forEach( product => {
+			console.log(product)
+			checkoutTable.innerHTML += createCartItem(product);
+		} )
+		
     }catch(e){
         checkoutTable.innerHTML = "Add items to your cart"
     }

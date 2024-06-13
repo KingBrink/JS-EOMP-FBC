@@ -1,14 +1,16 @@
 // Current year
 document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
-//variables
+// variables
 let tableContent = document.querySelector('[table-products]')
 
-let products = JSON.parse(localStorage.getItem('products')) || []
+let products = JSON.parse(localStorage.getItem('products')) || [];
+let checkout = JSON.parse(localStorage.getItem('checkout')) || [];
+
 document.querySelector('[admin-add-product]')
 
 let sortedProducts = document.getElementById('adminSortProduct')
 
-//displays my products in my admin table and has a modal for my edit function
+// displays my products in my admin table and has a modal for my edit function
 function adminContent(args){
     try{
         tableContent.innerHTML = ""
@@ -42,7 +44,7 @@ function adminContent(args){
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-secondary" onclick='new UpdateProduct(${product}, ${i})'>Save changes</button>
+                          <button type="button" class="btn btn-secondary" onclick='new UpdateProduct(this,${i}).update()'>Save changes</button>
                         </div>
                       </div>
                         </div> 
@@ -64,37 +66,71 @@ function adminContent(args){
 }
 adminContent(products)
 
-//this is my edit function
-function UpdateProduct(item, index){
-    try{
-        this.id = item.id;
-        this.productName = document.querySelector(`#admin-name${item.id}`).value;
-        this.description = document.querySelector(`#admin-detail${item.id}`);
-        this.amount = document.querySelector(`#admin-image${item.id}`).value;
-        this.img_url = document.querySelector(`#admin${item.id}`).value;
+// this is my edit function
+function UpdateProduct(element, index){ // you can get ids from elements created with javascript
+	console.log(element.parentElement.parentElement)
+	
+	this.id = index;
+	this.productName = null;
+	this.description = null;
+	this.amount = null;
+	this.img_url = null;
+	
+	this.getCurrent = () => {
+		let model = element.parentElement.parentElement;
+		let [name, image, description, price] = model.querySelector("[class=modal-body]").querySelector("[class=container]").children;
 
-        products[index] = Object.assign({}, this);
+		this.productName = name.value;
+		this.description = description.value;
+		this.amount = price.value;
+		this.img_url = image.value;
+	}
+	this.update = () => {
+		this.getCurrent()
+		let product = products[0];
+
+		product.productName = this.productName;
+		product.description = this.description;
+		product.amount = this.amount;
+		product.img_url = this.img_url;
+
+		console.log(product)
+
+		products[this.index] = product
         localStorage.setItem('products',JSON.stringify(products));
         adminContent(products);
         location.reload();
-    }catch(e){
+	}
+    try {
+       
+    } catch(e) {
         alert('Unable to Edit the Products')
     }
 }
 
-//this deletes my products on the website
+// this deletes my products on the website
 function deleteProduct(index){
     try{
-        products.splice(index, 1)
+		console.log(index)
+		// console.log(products[index])
+		let product = products[index];
+		// console.log(checkout)
+		checkout = checkout.filter( (item, index) => {
+			return item.productName != product.productName
+		} )
+        products = products.filter( (item, index) => {
+			return item.productName != product.productName
+		} )
         localStorage.setItem('products', JSON.stringify(products))
+        localStorage.setItem('checkout', JSON.stringify(checkout))
         adminContent(products);
-        location.reload()
+        // location.reload()
     }catch(e){
         alert('Unable to Delete')
     }
 }
 
-//sorts products from new to old and old to new
+// sorts products from new to old and old to new
 let highest = false;
 sortedProducts.addEventListener('click', () => {
     try{
@@ -112,7 +148,7 @@ sortedProducts.addEventListener('click', () => {
     }
 });
 
-//lets me add new product
+// 0lets me add new product
 let adminSavedProduct = document.getElementById('saveProduct')
 adminSavedProduct.addEventListener('click', () => {
     try{
