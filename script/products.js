@@ -10,7 +10,7 @@ data = JSON.stringify([
     productName: "PEACHY KEEN DREAM",
     category: "smoothie",
     description:
-      "2 ripe peaches, sliced (fresh or frozen), 1 banana, sliced (fresh or frozen), 1/2 cup Greek yogurt or dairy-free yogurt, 1/2 cup almond milk or any milk of your choice, 1 tablespoon honey or maple syrup (optional, depending on sweetness preference), Ice cubes (optional, for a colder smoothie)",
+      "Sliced peaches & banana, Greek/dairy-free yogurt, almond/any milk, honey/maple syrup (optional), ice cubes (optional) for a refreshing smoothie!",
     amount: 39.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health3.jpg",
@@ -19,7 +19,7 @@ data = JSON.stringify([
     id: 2,
     productName: "RASPBERRY RUSH REFRESHER",
     category: "smoothie",
-    description: "1 cup raspberries (fresh or frozen), 1/2 cup strawberries (fresh or frozen), 1/2 cup plain yogurt or dairy-free yogurt, 1/2 cup orange juice or apple juice, 1 tablespoon honey or maple syrup (optional), Ice cubes (optional)",
+    description: "Blend raspberries & strawberries, plain/dairy-free yogurt, orange/apple juice, honey/maple syrup (optional), ice cubes (optional) for a fruity delight!",
     amount: 39.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health4.jpg",
@@ -28,7 +28,7 @@ data = JSON.stringify([
     id: 3,
     productName: "BERRYLICIOUS BURST",
     category: "smoothie",
-    description: "1/2 cup mixed berries (such as strawberries, blueberries, and blackberries) (fresh or frozen), 1 banana, sliced (fresh or frozen), 1/2 cup spinach or kale leaves (optional, for added nutrition), 1/2 cup coconut water or any juice of your choice, 1/4 cup Greek yogurt or dairy-free yogurt, Ice cubes (optional)",
+    description: "Mixed berries (strawberries, blueberries, blackberries), sliced banana, spinach/kale (optional), coconut water/juice.",
     amount: 39.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health5.jpg",
@@ -38,7 +38,7 @@ data = JSON.stringify([
     productName: "CITRUS CRUSH CREATION",
     category: "smoothie",
     description:
-      "1 orange, peeled and segmented, 1/2 cup pineapple chunks (fresh or frozen), 1/2 cup mango chunks (fresh or frozen), 1/2 cup plain yogurt or dairy-free yogurt, 1/2 cup coconut water or any juice of your choice, Ice cubes (optional)",
+      "Peeled & segmented orange, pineapple & mango chunks, plain/dairy-free yogurt, coconut water/juice, ice cubes (optional). Blend for a tropical delight!",
     amount: 39.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health6.jpg",
@@ -48,7 +48,7 @@ data = JSON.stringify([
     productName: "DRAGON FIRE FUSION",
     category: "smoothie",
     description:
-      "1 dragon fruit (pitaya), peeled and diced, 1 banana, sliced (fresh or frozen), 1/2 cup mixed berries (such as strawberries and raspberries) (fresh or frozen), 1/2 cup coconut milk or any milk of your choice,  1 tablespoon honey or maple syrup (optional), Ice cubes (optional)",
+      "Pitaya (dragon fruit), diced, banana, mixed berries, coconut/any milk, honey/maple syrup (optional), ice cubes (optional). Blend for a vibrant, exotic smoothie!",
     amount: 39.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health7.jpg",
@@ -68,7 +68,7 @@ data = JSON.stringify([
     productName: "Chicken Caesar Crunch",
     category: "salad",
     description:
-      "Romaine lettuce, Caesar dressing (typically made with anchovies, garlic, egg yolk, Dijon mustard, lemon juice, olive oil, and Parmesan cheese), Croutons,  Shaved or grated Parmesan cheese, Optional: grilled chicken or shrimp",
+      "Romaine lettuce, Caesar dressing (anchovies, garlic, egg yolk, Dijon mustard, lemon juice, olive oil, Parmesan), croutons, shaved/grated Parmesan. Optional: grilled chicken or shrimp.",
     amount: 78.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health15.jpg",
@@ -88,7 +88,7 @@ data = JSON.stringify([
     productName: "Greek Goddess Wrap",
     category: "wrap",
     description:
-      "Grilled chicken or gyro meat (thinly sliced)",
+      "Grilled chicken or gyro meat (thinly sliced), Tzatziki sauce, Lettuce, Tomato slices, Red onion slices, Cucumber slices, Feta cheese crumbles, Kalamata olives, Warm pita or flatbread",
     amount: 119.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health17.jpg",
@@ -98,7 +98,7 @@ data = JSON.stringify([
     productName: "Southwest Fiesta Wrap",
     category: "wrap",
     description:
-      "Grilled or shredded chicken, Black beans (cooked and seasoned)",
+      "Grilled/shredded chicken, seasoned black beans, corn kernels, diced tomatoes, avocado/guacamole, shredded lettuce.",
     amount: 99.99,
 	cart: 0,
     img_url: "https://kingbrink.github.io/all-images/images/health18.jpg",
@@ -114,17 +114,7 @@ let products = localStorage.getItem("products") ? JSON.parse(localStorage.getIte
 let productWrapper = document.querySelector("[data-products]"); // this is the product/s holder.
 
 function createProduct(product){
-	return `
-  <div class="col-md-4 my-4">
-  <div class="card prodCard">
-  <img src="${product.img_url}" class="card-img-top img-fluid align-self-center productImg" alt="${product.id}">
-  <div class="card-body">
-  <h5 class="card-title">${product.productName}</h5>
-  <p class="card-text">${product.description}</p>
-  <p class="card-text">${product.amount}</p>
-  <a class="btn addButton" id="cart" onclick='addToCart(${JSON.stringify(product)})'>Add To Cart</a></div>
-  </div>
-  </div>`;
+	return `<div class="col-md-4 my-3"><div class="card prodCard"><img src="${product.img_url}" class="card-img-top h-50 w-50 img-fluid align-self-center mt-4" alt="${product.id}"><div class="card-body"><h5 class="card-title">${product.productName}</h5><p class="card-text">${product.description}</p><p class="card-text">${product.amount}</p><a class="btn btn-secondary" id="cart" onclick='addToCart(${JSON.stringify(product)})'>Add To Cart</a></div></div></div>`;
 }
 
 function displayProducts(args) {
