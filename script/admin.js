@@ -153,7 +153,8 @@ let adminSavedProduct = document.getElementById('saveProduct')
 adminSavedProduct.addEventListener('click', () => {
     try{
         products.push({
-            name: document.querySelector('#addName').value,
+            id: products.length + 1 || 1,
+            productName: document.querySelector('#addName').value,
             description: document.querySelector('#addDetail').value,
             amount: document.querySelector('#addAmount').value,
             img_url: document.querySelector('#addImage').value,
