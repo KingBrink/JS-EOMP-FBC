@@ -30,7 +30,7 @@ let products = JSON.parse(localStorage.getItem("products"))
           category: "smoothie",
           description:
             "1/2 cup mixed berries (such as strawberries, blueberries, and blackberries) (fresh or frozen), 1 banana, sliced (fresh or frozen), 1/2 cup spinach or kale leaves (optional, for added nutrition), 1/2 cup coconut water or any juice of your choice, 1/4 cup Greek yogurt or dairy-free yogurt, Ice cubes (optional)",
-          amoun: 39.99,
+          amount: 39.99,
           img_url: "https://kingbrink.github.io/all-images/images/health5.jpg",
         },
         {
@@ -38,7 +38,7 @@ let products = JSON.parse(localStorage.getItem("products"))
           category: "smoothie",
           description:
             "1 orange, peeled and segmented, 1/2 cup pineapple chunks (fresh or frozen), 1/2 cup mango chunks (fresh or frozen), 1/2 cup plain yogurt or dairy-free yogurt, 1/2 cup coconut water or any juice of your choice, Ice cubes (optional)",
-          amoun: 39.99,
+          amount: 39.99,
           img_url: "https://kingbrink.github.io/all-images/images/health6.jpg",
         },
         {
