@@ -37,6 +37,7 @@ function adminContent(args){
                           <form>
                           <div class="container">
                           <input class="form-control m-2" type="text" placeholder="Enter a Product Name" value="${product.productName}" name ="admin-name" id="admin-name${product.id}" required>
+                          <input class="form-control m-2" type="text" placeholder="Enter a category" value="${product.category}" name ="admin-name" id="admin-name${product.id}" required>
                           <input class="form-control m-2" type="text" placeholder="Enter Image URL" value="${product.img_url}" name="admin-image" id="admin-image${product.id}" required>
                           <textarea class="form-control m-2" placeholder="Enter your Product details" required name="admin-details" id="admin-details${product.id}">${product.description}</textarea>
                           <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" value="${product.amount}" name="admin-amount" id="admin-amount${product.id}" required>
